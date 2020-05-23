@@ -13,6 +13,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.4",
+    "peer": "^0.5.3",
+    "peerjs": "^1.2.0",
+    "peerjs-server": "^0.2.9",
     "socket.io": "^2.3.0"
   }
 }

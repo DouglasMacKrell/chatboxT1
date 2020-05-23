@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -19,10 +20,32 @@
         <form class="form-signin">
             <input type="text" id="handle" class="form-control" placeholder="NAME" required autofocus>
             <input type="text" id="message" class="form-control" placeholder="ENTER MESSAGE" required>
-            <button id = "button" class="btn btn-lg btn-primary btn-block" type="submit">SEND</button>
+            <button id="button" class="btn btn-lg btn-primary btn-block" type="submit">SEND</button>
         </form>
     </div>
 
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                remote
+                <video id="rVideo" autoplay="autoplay">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                local
+                <video id="lVideo" autoplay="autoplay" muted>
+            </div>
+        </div>
+
+        <span id="displayId"></span>
+        <input type="text" id="connId" class="form-control" placeholder="ENTER A CONNECTION ID" required>
+        <button id="conn-button" class="btn btn-lg btn-success btn-block" type="submit">CONNECT</button>
+        <button id="call-button" class="btn btn-lg btn-danger btn-block" type="submit">CALL</button>
+    </div>
+
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+
     <script src="/client.js" async defer></script>
 </body>
