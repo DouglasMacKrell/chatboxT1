@@ -3,6 +3,7 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const { PeerServer } = require('peer');
+const { ExpressPeerServer } = require('peer');
 const PORT = process.env.PORT || 3007;
 
 http.listen(PORT, () => {
@@ -33,3 +34,4 @@ const peerServer = PeerServer({
   path: '/myapp',
   generateClientId: customGenerationFunction
 });
+
