@@ -30,5 +30,6 @@ const customGenerationFunction = () => (Math.random().toString(36) + '0000000000
 
 const peerServer = PeerServer({
   port: 9000,
+  path: '/myapp',
   generateClientId: customGenerationFunction
 });
