@@ -68,9 +68,8 @@ let peer_id;
 // STEP 2: Create a PEER CONNECTION with the PEER OBJECT
 let peer = new Peer({
     secure: true,
-    host: 'dougschattest.herokuapp.com/',
+    host: 'https://dougschattest.herokuapp.com/',
     port: 9000,
-    path: '/myapp'
 });
 
 // STEP 3: Display the PEER ID on the DOM
