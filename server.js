@@ -30,7 +30,7 @@ io.on('connection',(socket) => {
 const customGenerationFunction = () => (Math.random().toString(36) + '0000000000000000000').substr(2, 16);
 
 const peerServer = PeerServer({
-  port: 9000,
+  port: 443,
   path: '/myapp',
   generateClientId: customGenerationFunction
 });

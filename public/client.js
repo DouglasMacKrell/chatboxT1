@@ -67,8 +67,9 @@ let peer_id;
 
 // STEP 2: Create a PEER CONNECTION with the PEER OBJECT
 let peer = new Peer({
-    host: 'https://dougschattest.herokuapp.com/myapp',
-    port: 9000,
+    key: 'peerJs',
+    host: 'dougschattest.herokuapp.com',
+    port: 443,
     path: '/myapp',
     secure: true
 });
