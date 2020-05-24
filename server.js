@@ -33,3 +33,4 @@ const peerServer = PeerServer({
   path: '/myapp',
   generateClientId: customGenerationFunction
 });
+

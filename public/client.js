@@ -67,7 +67,7 @@ let peer_id;
 
 // STEP 2: Create a PEER CONNECTION with the PEER OBJECT
 let peer = new Peer({
-    host: 'localhost',
+    host: '/',
     port: 9000,
     path: '/myapp'
 });
