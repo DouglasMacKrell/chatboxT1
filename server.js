@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-// const { PeerServer } = require('peer');
+const { PeerServer } = require('peer');
 const PORT = process.env.PORT || 3007;
 
 var cors = require('cors')
@@ -29,13 +29,13 @@ io.on('connection', (socket) => {
     })
 });
 
-// const customGenerationFunction = () => (Math.random().toString(36) + '0000000000000000000').substr(2, 16);
+const customGenerationFunction = () => (Math.random().toString(36) + '0000000000000000000').substr(2, 16);
 
-// const peerServer = PeerServer({
-//     port: 443,
-//     path: '/',
-//     generateClientId: customGenerationFunction
-// });
+const peerServer = PeerServer({
+    port: 443,
+    path: '/',
+    generateClientId: customGenerationFunction
+});
 
 
 
