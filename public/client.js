@@ -66,11 +66,7 @@ let conn;
 let peer_id;
 
 // STEP 2: Create a PEER CONNECTION with the PEER OBJECT
-let peer = new Peer({
-    host: '/',
-    port: 9000,
-    path: '/myapp'
-});
+var peer = new Peer({})
 
 // STEP 3: Display the PEER ID on the DOM
 peer.on('open', function(id){
